@@ -12,7 +12,7 @@ export const useGetBooks = () => {
             try {
                 setLoading(true)
                 const promises = categories.map(async (cat: string) => {
-                    return await axios.get<BooksCat>(`/${cat}.json`);
+                    return await axios.get<BooksCat>(`/data/categories/${cat}.json`);
                 });
                 const response = await Promise.all(promises);
                 const data = response.map(res => {
