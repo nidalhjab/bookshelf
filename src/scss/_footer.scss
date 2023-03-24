@@ -1,0 +1,124 @@
+footer {
+    text-align: start;
+    font-size: 10px;
+    padding: 0.5rem;
+    background-color: #323232;
+
+    .container {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    span {
+        color: var(--white-color);
+    }
+
+    ul {
+        margin-top: 1rem
+    }
+
+    li {
+        padding: 0.4rem 0;
+    }
+
+    a {
+        color: #888888;
+        text-decoration: none;
+        :active{
+            color:var(--green-background)
+        }
+    }
+
+    .navigation {
+        width: 30%;
+    }
+
+    .categories {
+        width: 70%;
+
+        .lists {
+            display: flex;
+            .list{
+                width: 35%;
+            }
+        }
+    }
+
+    .followUs {
+        width: 100%;
+    }
+
+    @media only screen and (min-device-width:768px) {
+        font-size: 0.7rem;
+        padding: 0;
+
+        .container {
+            >div {
+                padding: 1rem;
+                border-left: 1px solid #0000001f;
+            }
+        }
+
+        .navigation {
+            width: 20%;
+        }
+
+        .categories {
+            width: 60%;
+
+            .lists {
+                .list {
+                    width: 30%;
+                }
+            }
+        }
+
+        .followUs {
+            width: 20%;
+        }
+    }
+
+    @media only screen and (min-device-width: 1024px) {
+        font-size: 1rem;
+
+        .container {
+            width: 70%;
+            height: 460px;
+
+            >div {
+                height: 100%;
+                padding: 2rem;
+            }
+        }
+
+        .categories {
+            width: 60%;
+
+            .lists {
+                .list {
+                    width: 33%;
+                }
+            }
+        }
+        .navigation {
+            width: 20%;
+        }
+    
+        .categories {
+            width: 60%;
+    
+            .lists {
+                display: flex;
+                .list{
+                    width: 35%;
+                }
+            }
+        }
+    
+        .followUs {
+            width: 20%;
+        }
+    }
+}

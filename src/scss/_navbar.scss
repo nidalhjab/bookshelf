@@ -1,0 +1,121 @@
+nav {
+  svg {
+    color: var(--white-color);
+  }
+
+  background-color: var(--green-background);
+  transition: var(--transition);
+
+  .py-3 {
+    padding: 2rem 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      display: flex;
+
+      span {
+        font-size: 2rem;
+        color: var(--white-color);
+      }
+
+      #bold {
+        font-weight: 700;
+      }
+
+      #thin {
+        font-weight: 100;
+      }
+
+      #bolder {
+        font-weight: bolder;
+      }
+    }
+
+    .links-container {
+      .toggle {
+        display: flex;
+        position: relative;
+        z-index: 1;
+
+        svg {
+          color: var(--white-color);
+          font-size: 1.5rem;
+        }
+      }
+
+      .links {
+        width: 0vw;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 0;
+        background-color: var(--darkGreen-background);
+        visibility: hidden;
+        transition: var(--transition);
+        opacity: 0;
+
+        ul {
+          height: 100%;
+          list-style-type: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 2rem;
+
+          li {
+            a {
+              text-decoration: none;
+              color: var(--white-color);
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+      .responsive-toggle {
+        width: 50vw;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 768px) {}
+
+  @media only screen and (min-device-width: 1024px) {
+    background-color: var(--green-background);
+
+    .py-3 {
+      padding: 1rem 0;
+    }
+
+    .container {
+      .links-container {
+        .toggle {
+          display: none;
+        }
+
+        .links {
+          position: initial;
+          background-color: var(--green-background);
+          height: max-content;
+          visibility: visible;
+          opacity: 1;
+          width: 100%;
+
+          ul {
+            height: 1rem;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}
