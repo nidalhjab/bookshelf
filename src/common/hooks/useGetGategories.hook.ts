@@ -10,7 +10,7 @@ export const useGetGategories = () => {
         const getCategories = async () => {
             try {
                 setLoading(true)
-                const response = await axios.get<Categories>('/categories.json');
+                const response = await axios.get<Categories>('/data/categories.json');
                 if (response.status === 200) {
                     setCategories(response.data.categories.slice(0, 8))
                 }

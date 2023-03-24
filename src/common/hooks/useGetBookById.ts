@@ -10,7 +10,7 @@ export const useGetBookById = (id:number) => {
         const getCategories = async () => {
             try {
                 setLoading(true)
-                const response = await axios.get<Book>(`/books/book${id}.json`);
+                const response = await axios.get<Book>(`/data/books/book${id}.json`);
                 if(response.status === 200){
                     setBookInfo(response.data)
                 }
