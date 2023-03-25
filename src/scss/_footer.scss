@@ -3,63 +3,71 @@ footer {
     font-size: 10px;
     padding: 0.5rem;
     background-color: #323232;
-    
+
     .container {
-    margin: auto;
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 900px;
-    > div {
-    padding: 1rem;
-    border-left: 1px solid #0000001f;
+
+        .footer-item .lists {
+            display: flex;
+            flex-wrap: wrap;
+
+            .list {
+                min-width: 140px;
+            }
+        }
     }
-    }
-    
-    .navigation, .categories, .followUs {
-    min-height: 320px;
-    }
-    
-    .categories .lists {
-    display: flex;
-    flex-wrap: wrap;
-    .list{
-    min-width: 140px;
-    }
-    }
-    
+
     span {
-    color: var(--white-color);
+        color: var(--white-color);
     }
-    
+
     ul {
-    margin-top: 1rem;
+        margin-top: 1rem;
     }
-    
+
     li {
-    padding: 0.4rem 0;
+        padding: 0.4rem 0;
     }
-    
+
     a {
-    color: #888888;
-    text-decoration: none;
-    :active {
-    color: var(--green-background);
+        color: #888888;
+        text-decoration: none;
+
+        :active {
+            color: var(--green-background);
+        }
     }
-    }
+
     @media screen and (max-width: 720px) {
-    .navigation, .categories, .followUs {
-    min-height: auto;
+        .footer-item {
+            min-height: auto;
+        }
+
+        .container {
+            .footer-item {
+                border-left: none;
+            }
+        }
     }
-    .container {
-    > div {
-    border-left: none;
-    }
-    }
-    }
-    
+
     @media only screen and (min-device-width: 1024px) {
-    font-size: 1rem;
+        font-size: 1rem;
+
+        .container {
+
+            .footer-item {
+                min-height: 320px;
+                padding: 1rem;
+                border-left: 1px solid #0000001f;
+
+                .lists {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .list {
+                        min-width: 140px;
+                    }
+                }
+            }
+        }
     }
-    }
+}

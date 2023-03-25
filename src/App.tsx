@@ -10,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
     <div className="app">
-  
       <NavBar/>
       <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -18,7 +17,6 @@ function App() {
           <Route path="books/:id" element={<BookDetails />}></Route>
         </Routes>
       <Footer/>
-
     </div>
     </BrowserRouter>
   );

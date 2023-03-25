@@ -1,6 +1,7 @@
 import { useGetGategories } from "../hooks/useGetGategories.hook"
 import { CategorieItem } from "./CategorieItem";
 import { Spinner } from "./Spinner";
+import Grid from '@mui/material/Grid';
 
 export const Categories: React.FC = () => {
   const { categories, loading, error } = useGetGategories();
@@ -23,9 +24,9 @@ export const Categories: React.FC = () => {
       <div className="title">
         <h2>Broswe<span> Our Most Popular Categories</span></h2>
       </div>
-      <div className="items">
+      <Grid className="items" container >
         {content}
-      </div>
+      </Grid>
     </div>
   );
 }
