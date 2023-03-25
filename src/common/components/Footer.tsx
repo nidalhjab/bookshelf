@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
         <footer>
             <div className="container mx-3">
                 <Grid container>
-                    <Grid sm={2} md={2} lg={2} item>
+                    <Grid xs={12} sm={2} md={2} lg={2} item>
                         <div className="footer-item">
                             <span>NAVIGATION</span>
                             <ul>
@@ -18,10 +18,12 @@ export const Footer: React.FC = () => {
                             </ul>
                         </div>
                     </Grid>
-                    <Grid sm={8} md={8} lg={6} item>
+                    <Grid xs={12} sm={6} md={6} lg={8} item>
                         <div className="footer-item">
                             <span>CATEGORIES</span>
                             <div className="lists">
+                                <Grid container>
+                                    <Grid xs={3} sm={3} md={2} lg={4} item>
                                 <div className="list">
                                     <ul>
                                         <li><Link to="#">Art</Link></li>
@@ -34,6 +36,8 @@ export const Footer: React.FC = () => {
                                         <li><Link to="#">Comics</Link></li>
                                     </ul>
                                 </div>
+                                </Grid>
+                                <Grid xs= {4} sm={4} md={6} lg={4} item>
                                 <div className="list">
                                     <ul>
                                         <li><Link to="#">Contemporary</Link></li>
@@ -46,6 +50,8 @@ export const Footer: React.FC = () => {
                                         <li><Link to="#">Graphic Novels</Link></li>
                                     </ul>
                                 </div>
+                                </Grid>
+                                <Grid xs={3} sm={2} md={2} lg={4} item>
                                 <div className="list">
                                     <ul>
                                         <li><Link to="#">Historical Fiction</Link></li>
@@ -57,10 +63,12 @@ export const Footer: React.FC = () => {
                                         <li><Link to="#">Music</Link></li>
                                     </ul>
                                 </div>
+                                </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </Grid>
-                    <Grid sm={2} md={2} lg={2} item>
+                    <Grid xs={12} sm={2} md={2} lg={2} item>
                         <div className="footer-item">
                             <span>FOLLOW US</span>
                             <ul>
