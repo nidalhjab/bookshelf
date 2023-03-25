@@ -7,8 +7,6 @@ footer {
     .container {
 
         .footer-item .lists {
-            display: flex;
-            flex-wrap: wrap;
 
             .list {
                 min-width: 140px;
@@ -59,14 +57,6 @@ footer {
                 padding: 1rem;
                 border-left: 1px solid #0000001f;
 
-                .lists {
-                    display: flex;
-                    flex-wrap: wrap;
-
-                    .list {
-                        min-width: 140px;
-                    }
-                }
             }
         }
     }
