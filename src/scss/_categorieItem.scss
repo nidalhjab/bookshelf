@@ -1,16 +1,12 @@
 .categorieItem {
-    width: 50%;
     display: flex;
-    align-items: start;
 
-    .categorieItem-img {
-        img {
-            width: 50px;
-        }
+    img {
+        width: 100px;
     }
 
     .categorieItem-info {
-        font-size: 12px;
+        font-size: 0.5rem;
 
         >span {
             margin: 0.5rem;
@@ -21,10 +17,11 @@
         }
 
         #categorieItem-title {
+
             color: var(--main-text);
         }
 
-        .categorieItem-desc {
+        #categorieItem-desc {
             color: var(--grey-desc)
         }
     }
@@ -32,35 +29,17 @@
 
 @media only screen and (min-device-width:768px) {
     .categorieItem {
-        width: 40%;
+        .categorieItem-info {
+            font-size: 0.7rem;
+        }
     }
 }
 
 @media only screen and (min-device-width: 1024px) {
 
     .categorieItem {
-        width: 25%;
-
-        .categorieItem-img {
-            width: 25%;
-
-            img {
-                width: 100%;
-            }
-        }
-
         .categorieItem-info {
-            font-size: 14px;
-            width: 70%;
-
-            #categorieItem-title {
-
-                color: var(--main-text);
-            }
-
-            #categorieItem-desc {
-                color: var(--grey-desc)
-            }
+            font-size: 1rem;
         }
     }
 }

@@ -42,27 +42,25 @@ export const BooksSwiper: React.FC<SwiperProps> = ({ books, backColor, cat }: Sw
             },
           }}
         >
-
           {books.map(({ id, title, author, image, reviewedBy }) => {
             console.log(id)
             return (
               <SwiperSlide>
                 <Link to={`/books/${id}`}>
                   <div className='wrapper'>
-                    <div className="img">
+                    <figure className="img">
                       <LazyLoadImage src={image}
                         alt="Book Image"
                       />
-                    </div>
-                    <div className="caption">
+                    </figure>
+                    <figcaption className="caption">
                       <h6 style={backColor.length === 1 ? { color: "#0b0b0b" } : { color: "var(--white-color)" }} >{title}</h6>
                       <span style={backColor.length === 1 ? { color: "#929292" } : { color: "var(--green-background)" }} >by {author} </span>
                       <span style={backColor.length === 1 ? { color: "#929292" } : { color: "var(--green-background)" }}>reviewed By {reviewedBy} </span>
-                    </div>
+                    </figcaption>
                   </div>
                 </Link>
               </SwiperSlide>
-
             )
           })}
         </Swiper>

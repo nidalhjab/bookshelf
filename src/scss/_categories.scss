@@ -7,14 +7,11 @@
             font-weight: 100;
         }
     }
+
     .items {
         margin-top: 1rem;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
 
-        h3 {
+        h2 {
             text-align: center;
         }
     }
@@ -24,14 +21,10 @@
     py-3 {
         padding: 1rem 0;
     }
+
     .categories {
         .title {
             font-size: 1.5rem;
-        }
-
-        .items {
-            justify-content: center;
-            align-items: center;
         }
     }
 }
